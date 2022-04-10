@@ -49,5 +49,32 @@ public class Main {
             default:
                 System.out.println("Такого месяца не существует");
         }
+        //Задание 6
+        System.out.println("Доп задание");
+        int age = 19;
+        int salary = 58_000;
+        int creditLimit;
+        if (age >= 23) {
+            creditLimit = salary * 3;
+        } else creditLimit = salary * 2;
+        if (salary >= 50_000) creditLimit *= 1.2;
+            else if (salary >= 80_000) creditLimit *= 1.5;
+        System.out.println("Мы готовы выдать вам кредитную карту с лимитом " + creditLimit + " рублей.");
+        //Задание 7
+        age = 25;
+        salary = 60_000;
+        int wantedSum = 330_000;
+        float interestRate = 10f;
+        int loanTerm = 12;
+        float maxMonthlyPayment = salary * 0.5f;
+        float monthlyPayment;
+        if (age < 23) interestRate += 1;
+            else if (age < 30 ) interestRate += 0.5;
+        if (salary > 80_000) interestRate -= 0.7;
+        monthlyPayment = (wantedSum + wantedSum * interestRate / 100) / loanTerm;
+        if (monthlyPayment <= maxMonthlyPayment) System.out.println("Максимальный платеж при ЗП " + salary + " равен " + maxMonthlyPayment + " рублей." +
+                " Платеж по кредиту " + monthlyPayment + " рублей. Одобрено.");
+            else System.out.println("Максимальный платеж при ЗП " + salary + " равен " + maxMonthlyPayment + " рублей." +
+                " Платеж по кредиту " + monthlyPayment + " рублей. Отказано.");
     }
 }
