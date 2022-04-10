@@ -52,13 +52,13 @@ public class Main {
         //Задание 6
         System.out.println("Доп задание");
         int age = 19;
-        int salary = 58_000;
+        int salary = 50_000;
         int creditLimit;
         if (age >= 23) {
             creditLimit = salary * 3;
         } else creditLimit = salary * 2;
-        if (salary >= 50_000) creditLimit *= 1.2;
-            else if (salary >= 80_000) creditLimit *= 1.5;
+        if (salary >= 80_000) creditLimit *= 1.5;
+            else if (salary >= 50_000) creditLimit *= 1.2;
         System.out.println("Мы готовы выдать вам кредитную карту с лимитом " + creditLimit + " рублей.");
         //Задание 7
         age = 25;
